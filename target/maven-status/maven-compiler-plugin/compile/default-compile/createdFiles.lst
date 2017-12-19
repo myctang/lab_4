@@ -1,0 +1,14 @@
+app\entities\Account.class
+app\security\ResourceConfiguration$OAuthRequestedMatcher.class
+app\entities\Role.class
+app\entities\Point.class
+app\repositories\AccountRepo.class
+app\repositories\PointRepo.class
+app\security\AuthorizationConfiguration.class
+app\security\ResourceConfiguration$1.class
+app\controllers\AccountController.class
+app\security\SecurityConfiguration.class
+app\controllers\CheckPointController.class
+app\Application.class
+app\AccountService.class
+app\security\ResourceConfiguration.class

@@ -1,0 +1,59 @@
+html, body{
+    min-width: 300px !important;
+}
+.error{
+    display: none;
+}
+.dot{
+    position: absolute;
+    width: 2px;
+    height: 2px;
+}
+#chart{
+    position: relative;
+    width: 230px;
+    margin: auto;
+}
+.input{
+    /*width: 70% !important;*/
+    margin: auto;
+}
+.center-btn{
+    display: block !important;
+    margin: auto;
+    margin-bottom: 5px;
+}
+#pointsTable{
+    display: none;
+}
+.error{
+    color: red;
+    text-align: center;
+}
+.form-input{
+    margin-bottom: 5px;
+}
+.registerLink{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+.header{
+    background: #2aabd2;
+    color: #374e0c;
+    height: 40px;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+.table{
+    text-align: center;
+}
+.table th{
+    text-align: center;
+}
+.header-container{
+    padding: 0 !important;
+}
+.img img{
+    margin:auto;
+}

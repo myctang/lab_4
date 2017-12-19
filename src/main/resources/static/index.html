@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lab_4</title>
+    <!--<script data-curl-run="run.js" src="lib/curl/src/curl.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script>
+    <script src="lib/carhartl-jquery-cookie-92b7715/jquery.cookie.js"></script>
+    <script type="text/html" id="login-template">
+        <div class="template">
+            <div class="container">
+                <div class="col-lg-4 offset-lg-4 col-sm-8 offset-sm-2 col-12">
+                    <form>
+                        <input type="text" class="input form-control form-input" name="login" placeholder="Логин" id="loginTextField">
+                        <input type="text" class="input form-control form-input" name="password" placeholder="Пароль" id="passwordTextField">
+                        <p class="error">Логин или пароль неверны</p>
+                        <button type="button" class="btn btn-primary center-btn" onclick="tryLogin()">Войти</button>
+                    </form>
+                    <a href="#!/register" class="registerLink">Зарегистрироваться</a>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script type="text/html" id="register-template">
+        <div class="template">
+            <div class="container">
+                <div class="col-lg-4 offset-lg-4 col-sm-8 offset-sm-2 col-12">
+                    <form>
+                        <input type="text" class="input form-control form-input" name="login" placeholder="Логин" id="loginTextFieldRegister">
+                        <p class="error" id="duplicate">Аккаунт с таким логином уже существует</p>
+                        <p class="error" id="nullLogin">Введите логин</p>
+                        <input type="text" class="input form-control form-input" name="password" placeholder="Пароль" id="passwordTextFieldRegister">
+                        <p class="error" id="nullPassword">Введите пароль</p>
+                        <button type="button" class="btn btn-primary center-btn" onclick="tryRegister()">Зарегистрироваться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script type="text/html" id="pointTable-template">
+        <div class="template">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 offset-xl-2 col-12">
+                        <div  id="chart" class="img">
+                            <img src="bone/areas.png" onclick="sendPointFromImage()">
+                        </div>
+                    </div>
+                    <div class="col-xl-4 offset-xl-1 col-sm-8 offset-sm-2 col-12">
+                        <form>
+                            <input type="text" class="input form-control form-input" id="XPoint" placeholder="X">
+                            <input type="text" class="input form-control form-input" id="YPoint" placeholder="Y">
+                            <input type="text" class="input form-control form-input" id="RPoint" placeholder="R" onchange="changeRadius()">
+                            <button class="btn btn-primary center-btn" onclick="sendPoint()" id="sendButton">Добавить</button>
+                        </form>
+                        <button class="btn btn-danger center-btn" onclick="logout()">Разлогиниться</button>
+                        <p class="error" id="XError">Введите X от -5 до 3</p>
+                        <p class="error" id="YError">Введите Y от -5 до 3</p>
+                        <p class="error" id="RError">Введите R от -5 до 3</p>
+                    </div>
+                    <table class="table table-striped pointsTable" id="pointsTable">
+                        <thead>
+                            <tr>
+                                <th class="w-25">X</th>
+                                <th class="w-25">Y</th>
+                                <th class="w-25">R</th>
+                            </tr>
+                        </thead>
+                        <tbody id="pointsBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script type="text/html" id="point-template">
+        <tr>
+            <td><%=x%></td>
+            <td><%=y%></td>
+            <td><%=r%></td>
+        </tr>
+    </script>
+    <script src="bone/main.js"></script>
+    <script src="bone/indexFunctions.js"></script>
+    <script src="lib/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="bone/index.css">
+    <link rel="stylesheet" href="lib/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/bootstrap-4.0.0-alpha.6-dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="lib/bootstrap-4.0.0-alpha.6-dist/css/bootstrap-reboot.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+    <div class="container-fluid header-container">
+        <div class="col-12 header">
+            Попов Игорь Геннадьевич Р3202
+        </div>
+    </div>
+    <div id="start">
+    </div>
+</body>
+</html>
